@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-infra-monitoring-new
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: guestbook-ui
+  template:
+    metadata:
+      labels:
+        app: kpradeep/devops-infra-monitoring-new
+    spec:
+      containers:
+      - image:geethikaperisetla/devops-products-app-new:latest
+        name: devops-infra-monitoring-new
+        ports:
+        - containerPort: 9999
