@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - image:geethikaperisetla/devops-products-app-new:latest
-        name: devops-infra-monitoring-new
+        name: devops-products-app-new
         ports:
         - containerPort: 9999
